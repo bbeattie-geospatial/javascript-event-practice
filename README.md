@@ -1,35 +1,29 @@
-# CodespacesWebTemplate
+# Lecture 18 Practice
+In this practice problem we will build a web page that utilizes HTML events to call JavaScript functions that will either increment or decrement a value.  We will also record what the user's actions are on the page in an array and then display those logs when requested.  
 
-Provides the basic configuration to launch a GitHub Codespace environment ready for HTML, CSS, and JavaScript coding. The project will spin up a Codespace with the following plugins:
+## Implementation
 
-- [Prettier](https://github.com/prettier/prettier-vscode)
-- [LiveServer](https://github.com/ritwickdey/vscode-live-server)
-- [GitDoc](https://github.com/lostintangent/gitdoc)
+### Initial Page Load
+The page will render with three rows of elements.
+ * Row 1:  Text informing the user on the basics of the web page and that the the value can't go below zero.
+ * Row 2:  This row will consist of two buttons and an input field.  The first element will be a button that is used to decrease the value.  The second element is an input element that will hold the value and only allows numbers.  The value should be defaulted to zero.  The third element is another button that will increase the value.
+ * Row 3:  On this row there will be two buttons.  The first button resets the value to zero.  The second button causes the log viewing section to become visible.  
+![image](.assets/image.png)
 
-The **Prettier** plugin helps format your code to a consistent style. The **LiveServer** plugin will launch a local web server to host your web pages. The server will automatically refresh the page when you save your changes. the **GitDoc** plugin allows you to automatically commit and push your changes to your repository on a periodic basis. To enable the **GitDoc** plugin you will need to go to update the Settings configuration for it.
+With the logs displayed
+![image](.assets/image_2.png)
 
-## Configuration
+### Functional Requirements
+1. Decrease button should decrease the value in the input box by one unless that would cause the value to be less than zero.  If the value would be less than zero then set the value to zero.
+2. Increase button should increase the value in the input box by one, no restrictions.
+3. Input box will let the user entere their own value.  If the value is less than zero then the value will get reset to zero in the input box.  If the user then clicks the increase or decrease buttons the behavior of those buttons will continue only now from the new value.
+4. Reset button will reset the input value to be set back to zero.  It will also hide the logs section if it is visible.
+5. Show Logs button will cause the logs section to be displayed.  Each action logged will be displayed on its own line.
+6. Any action taken by the user, clicking the buttons or manually entering a value in the input box will be recorded in an array for display.
 
-### GitDoc
+### Styling
+In the example solution the buttons have been customized with font, color, border, and margins.  Feel free to experiment with CSS to give your page a unique look and feel.
 
-GitDoc is a great extension to automatically commit and push changes into the repository. For developers who are just getting started with web development, configuring this extension to automatically save their changes can make the introduction into git version control a much less intimidating experience. Because the extension cannot be configured by default to automatically push the changes up to the repository, users will need to update the settings the first time they launch project in Codespaces.
+## Demonstration
 
-1. On the right-hand side of the `Codespaces` editor, click on the `Extensions` icon.
-
-![image](.assets/extensionIcon.jpg) 
-
-2. Once the `Extensions` sidebar expands, click on the gear icon in the `GitDoc` extension card and then select `Extension Settings` from the menu.
-
-![image](.assets/extensionSettingClick.jpg)
-
-3. Update the `Auto Commit Delay` to the number of milliseconds you would like the plugin wait before checking for file changes. The number is in milliseconds, 1 second = 1000 milliseconds. I've found the 5000 is a good number to use.
-
-![image](.assets/autoCommitDelay.jpg) 
-
-4. (Optional) Change the `Commit Validation Level` to `none`. This will allow all changes, even those that might include code which has errors in it, to be saved.
-
-![image](.assets/commitValidation.jpg) 
-
-5. Check the box associated with `Enabled` under the `Commit Validation Level` section.
-
-6. Refresh the page in your browser so that the settings can be applied to the editor.
+![video](.assets/Lecture17PracticeDemo.mp4)
