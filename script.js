@@ -3,6 +3,7 @@ const increasebtn = document.getElementById("increase");
 const resetbtn = document.getElementById("reset");
 const showlogsbtn = document.getElementById("showlogs");
 const inputbox = document.getElementById("inputbox");
+const logscontainer = document.getElementById("logsContainer");
 
 let initialvalue = 0;
 const resetvalue = 0;
@@ -38,3 +39,4 @@ inputbox.addEventListener("change", (e) => {
     initialvalue = parseInt(e.target.value);
   }
 });
+
