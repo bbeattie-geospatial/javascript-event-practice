@@ -10,9 +10,12 @@ let logs = [];
 
 decreasebtn.addEventListener("click", () => {
   if (inputbox.value > 0) {
+    let oldValue = initialvalue;
     initialvalue = initialvalue - 1;
     inputbox.value = initialvalue;
-    logs.push("User has decreased the value");
+    logs.push(
+      "User has decreased the value " + oldValue + " to " + initialvalue
+    );
     console.log(logs);
   }
 });
