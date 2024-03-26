@@ -3,8 +3,10 @@ const increasebtn = document.getElementById("increase");
 const resetbtn = document.getElementById("reset");
 const showlogsbtn = document.getElementById("showlogs");
 const inputbox = document.getElementById("inputbox");
+
 let initialvalue = 0;
 const resetvalue = 0;
+let logs = [];
 
 decreasebtn.addEventListener("click", () => {
   if (inputbox.value > 0) {
