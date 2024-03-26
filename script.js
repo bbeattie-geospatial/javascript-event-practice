@@ -29,6 +29,7 @@ increasebtn.addEventListener("click", () => {
 resetbtn.addEventListener("click", () => {
   initialvalue = 0;
   inputbox.value = initialvalue;
+  logs = [];
 });
 
 inputbox.addEventListener("change", (e) => {
