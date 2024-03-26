@@ -40,3 +40,8 @@ inputbox.addEventListener("change", (e) => {
   }
 });
 
+showlogsbtn.addEventListener("click", () => {
+  for (log in logs) {
+    logscontainer.innerHTML(log);
+  }
+});
