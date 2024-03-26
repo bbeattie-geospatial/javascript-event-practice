@@ -5,18 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Counter App</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
   <p>Increase or decrease the value using the buttons. The value can not get below zero.</p>
   <div>
-    <button onclick="Subtract()">Decrease</button>
+    <button onclick="Subtract()">-</button>
     <input id="inputbox" type="number" value="0">
-    <button onclick="Add()">Increase</button>
+    <button onclick="Add()">+</button>
   </div>
   <div>
     <button>Reset</button>
     <button>Show Logs</button>
+  </div>
+  <div>
+    <p id="Logs">Logs</p>
+    <div id="logsContainer"></div>
   </div>
   <script src="/script.js"></script>
 </body>
