@@ -22,14 +22,16 @@ decreasebtn.addEventListener("click", () => {
 });
 
 increasebtn.addEventListener("click", () => {
+  oldValue = initialvalue;
   initialvalue = initialvalue + 1;
   inputbox.value = initialvalue;
+  logs.push("User has increased the value " + oldValue + " to " + initialvalue);
 });
 
 resetbtn.addEventListener("click", () => {
   initialvalue = 0;
   inputbox.value = initialvalue;
-  logs = [];
+  logs.push("User has initiated a rest");
 });
 
 inputbox.addEventListener("change", (e) => {

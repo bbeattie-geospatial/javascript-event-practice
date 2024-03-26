@@ -29,6 +29,7 @@ input {
   background-color: blue;
   height: 200px;
   color: white;
+  padding-top: 10px;
 }
 
 #Logs {
