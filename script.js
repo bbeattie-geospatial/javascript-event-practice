@@ -4,4 +4,4 @@ const resetbtn = document.getElementById("reset");
 const showlogsbtn = document.getElementById("showlogs");
 const inputbox = document.getElementById("inputbox");
 
-console.log(decreasebtn.value);
+decreasebtn.addEventListener("click", console.log("Hello"));
