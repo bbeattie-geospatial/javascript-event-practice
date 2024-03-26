@@ -6,6 +6,15 @@ const inputbox = document.getElementById("inputbox");
 let initialvalue = 0;
 
 decreasebtn.addEventListener("click", () => {
-  console.log("hello");
-  console.log(inputbox.value);
+  initialvalue = initialvalue - 1;
+  inputbox.value = initialvalue;
 });
+
+increasebtn.addEventListener("click", () => {
+  initialvalue = initialvalue + 1;
+  inputbox.value = initialvalue;
+});
+
+resetbtn.addEventListener("click", () => {
+  inputbox.value = initialvalue
+})
