@@ -25,6 +25,7 @@ resetbtn.addEventListener("click", () => {
 
 inputbox.addEventListener("change", (e) => {
   if (e.target.value < 0) {
-    inputbox.value = 0;
+    initialvalue = 0;
+    inputbox.value = initialvalue;
   }
 });
