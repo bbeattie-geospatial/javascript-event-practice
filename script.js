@@ -7,8 +7,12 @@ let initialvalue = 0;
 const resetvalue = 0;
 
 decreasebtn.addEventListener("click", () => {
-  initialvalue = initialvalue - 1;
-  inputbox.value = initialvalue;
+  if (inputbox.value < 0) {
+    inputbox.value = 0;
+  } else {
+    initialvalue = initialvalue - 1;
+    inputbox.value = initialvalue;
+  }
 });
 
 increasebtn.addEventListener("click", () => {
