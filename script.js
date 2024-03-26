@@ -22,3 +22,7 @@ resetbtn.addEventListener("click", () => {
   initialvalue = 0;
   inputbox.value = initialvalue;
 });
+
+inputbox.addEventListener("change", (e) => {
+  console.log(e);
+});
