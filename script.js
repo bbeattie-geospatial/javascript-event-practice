@@ -4,6 +4,7 @@ const resetbtn = document.getElementById("reset");
 const showlogsbtn = document.getElementById("showlogs");
 const inputbox = document.getElementById("inputbox");
 let initialvalue = 0;
+const resetvalue = 0;
 
 decreasebtn.addEventListener("click", () => {
   initialvalue = initialvalue - 1;
@@ -16,5 +17,5 @@ increasebtn.addEventListener("click", () => {
 });
 
 resetbtn.addEventListener("click", () => {
-  inputbox.value = initialvalue
-})
+  inputbox.value = resetvalue;
+});
