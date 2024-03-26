@@ -27,5 +27,7 @@ inputbox.addEventListener("change", (e) => {
   if (e.target.value < 0) {
     initialvalue = 0;
     inputbox.value = initialvalue;
+  } else {
+    initialvalue = parseInt(e.target.value);
   }
 });
