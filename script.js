@@ -42,6 +42,7 @@ inputbox.addEventListener("change", (e) => {
 
 showlogsbtn.addEventListener("click", () => {
   for (let log in logs) {
-    console.log((logscontainer.innerHTML = log));
+    logscontainer.innerHTML = logs[0] + "<br>";
+    console.log(logs);
   }
 });
